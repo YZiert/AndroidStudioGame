@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ВЫБЕРИТЕ СЛОЖНОСТЬ"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Легкий уровень -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEasy"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="ЛЕГКИЙ"
+        android:textSize="16sp"
+        style="@style/DifficultyButton.Easy"
+        android:layout_marginBottom="12dp"
+        app:icon="@drawable/ic_star"
+        app:iconGravity="textStart" />
+
+    <!-- Средний уровень -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMedium"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="СРЕДНИЙ"
+        android:textSize="16sp"
+        style="@style/DifficultyButton.Medium"
+        android:layout_marginBottom="12dp"
+        app:icon="@drawable/ic_star"
+        app:iconGravity="textStart" />
+
+    <!-- Высокий уровень -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHard"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="ВЫСОКИЙ"
+        android:textSize="16sp"
+        style="@style/DifficultyButton.Hard"
+        android:layout_marginBottom="12dp"
+        app:icon="@drawable/ic_star"
+        app:iconGravity="textStart" />
+
+    <!-- Непобедимый уровень -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUnbeatable"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="НЕПОБЕДИМЫЙ"
+        android:textSize="16sp"
+        style="@style/DifficultyButton.Unbeatable"
+        android:enabled="false"
+        app:icon="@drawable/ic_lock"
+        app:iconGravity="textStart" />
+
+    <TextView
+        android:id="@+id/tvUnbeatableHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Победите на высоком уровне для разблокировки"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:visibility="visible" />
+
+</LinearLayout>

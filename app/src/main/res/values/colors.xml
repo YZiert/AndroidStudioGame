@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета темы -->
+    <color name="primary">#1E88E5</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_light">#64B5F6</color>
+    <color name="accent">#FF6F00</color>
+
+    <!-- Цвета для текста -->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Цвета для игры -->
+    <color name="ocean_blue">#0277BD</color>
+    <color name="ocean_dark">#01579B</color>
+    <color name="cell_empty">#E3F2FD</color>
+    <color name="cell_ship">#37474F</color>
+    <color name="cell_hit">#FF5252</color>
+    <color name="cell_miss">#90CAF9</color>
+    <color name="cell_destroyed">#B71C1C</color>
+
+    <!-- Цвета для уровней сложности -->
+    <color name="easy_color">#4CAF50</color>
+    <color name="medium_color">#FFC107</color>
+    <color name="hard_color">#FF5722</color>
+    <color name="unbeatable_color">#9C27B0</color>
+
+    <!-- Цвета для статистики -->
+    <color name="win_color">#4CAF50</color>
+    <color name="loss_color">#F44336</color>
+    <color name="divider">#BDBDBD</color>
+
+    <!-- Градиенты для фона -->
+    <color name="gradient_start">#0D47A1</color>
+    <color name="gradient_end">#42A5F5</color>
+
+    <!-- Полупрозрачные цвета -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+</resources>

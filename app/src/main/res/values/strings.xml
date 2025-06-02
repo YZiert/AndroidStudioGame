@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Морской Бой</string>
+
+    <!-- Главное меню -->
+    <string name="game_title">МОРСКОЙ БОЙ</string>
+    <string name="new_game">НОВАЯ ИГРА</string>
+    <string name="settings">НАСТРОЙКИ</string>
+    <string name="statistics">СТАТИСТИКА</string>
+    <string name="exit">ВЫХОД</string>
+
+    <!-- Выбор режима игры -->
+    <string name="choose_game_mode">ВЫБЕРИТЕ РЕЖИМ ИГРЫ</string>
+    <string name="two_players">ИГРА С ДРУГОМ</string>
+    <string name="two_players_desc">Играйте вдвоем на одном устройстве</string>
+    <string name="vs_ai">ИГРА С КОМПЬЮТЕРОМ</string>
+    <string name="vs_ai_desc">Сразитесь с искусственным интеллектом</string>
+
+    <!-- Уровни сложности -->
+    <string name="choose_difficulty">ВЫБЕРИТЕ СЛОЖНОСТЬ</string>
+    <string name="easy">ЛЕГКИЙ</string>
+    <string name="medium">СРЕДНИЙ</string>
+    <string name="hard">ВЫСОКИЙ</string>
+    <string name="unbeatable">НЕПОБЕДИМЫЙ</string>
+    <string name="unbeatable_hint">Победите на высоком уровне для разблокировки</string>
+
+    <!-- Игровой процесс -->
+    <string name="player_1_place_ships">Игрок 1: Разместите корабли</string>
+    <string name="player_2_place_ships">Игрок 2: Разместите корабли</string>
+    <string name="place_your_ships">Разместите ваши корабли</string>
+    <string name="place_ship">Разместите корабль: %1$d клеток</string>
+    <string name="horizontal">Горизонтально</string>
+    <string name="vertical">Вертикально</string>
+    <string name="random">Случайно</string>
+    <string name="ready">ГОТОВО</string>
+
+    <string name="player_turn">Ход игрока %1$d</string>
+    <string name="your_turn">Ваш ход</string>
+    <string name="ai_turn">Ход компьютера</string>
+    <string name="choose_cell">Выберите клетку для выстрела</string>
+    <string name="hit">Попадание! Стреляйте еще раз</string>
+    <string name="miss">Промах!</string>
+    <string name="ship_destroyed">Корабль уничтожен! Стреляйте еще раз</string>
+    <string name="battle_started">Битва началась!</string>
+
+    <!-- Результаты игры -->
+    <string name="game_over">Игра окончена</string>
+    <string name="player_wins">Игрок %1$d победил!</string>
+    <string name="you_win">Поздравляем! Вы победили!</string>
+    <string name="ai_wins">Компьютер победил!</string>
+    <string name="new_game_button">Новая игра</string>
+    <string name="to_menu">В меню</string>
+
+    <!-- Статистика -->
+    <string name="general_stats">ОБЩАЯ СТАТИСТИКА</string>
+    <string name="total_games">Всего игр:</string>
+    <string name="wins">Победы:</string>
+    <string name="losses">Поражения:</string>
+    <string name="win_rate">Процент побед:</string>
+    <string name="current_streak">Текущая серия побед:</string>
+    <string name="best_streak">Лучшая серия побед:</string>
+    <string name="wins_by_difficulty">ПОБЕДЫ ПО УРОВНЯМ</string>
+    <string name="reset_statistics">СБРОСИТЬ СТАТИСТИКУ</string>
+
+    <!-- Настройки -->
+    <string name="sound_and_vibration">ЗВУК И ВИБРАЦИЯ</string>
+    <string name="sound_effects">Звуковые эффекты</string>
+    <string name="sound_effects_desc">Звуки выстрелов, попаданий и фоновая музыка</string>
+    <string name="vibration">Вибрация</string>
+    <string name="vibration_desc">Тактильная обратная связь при выстрелах</string>
+    <string name="about_game">ОБ ИГРЕ</string>
+    <string name="game_version">Версия 1.0</string>
+    <string name="game_description">Классическая игра в морской бой с современным интерфейсом</string>
+    <string name="copyright">© 2025 Sea Battle Game</string>
+
+    <!-- Диалоги -->
+    <string name="exit_confirm_title">Выход из игры</string>
+    <string name="exit_confirm_message">Вы действительно хотите выйти?</string>
+    <string name="exit_game_confirm_message">Вы уверены, что хотите выйти? Прогресс будет потерян.</string>
+    <string name="reset_stats_title">Сброс статистики</string>
+    <string name="reset_stats_message">Вы уверены, что хотите сбросить всю статистику? Это действие нельзя отменить.</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="cancel">Отмена</string>
+    <string name="reset">Сбросить</string>
+
+    <!-- Метки игроков -->
+    <string name="player_1">ИГРОК 1</string>
+    <string name="player_2">ИГРОК 2</string>
+    <string name="computer">КОМПЬЮТЕР</string>
+</resources>
