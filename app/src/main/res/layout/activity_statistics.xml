@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".ui.StatisticsActivity">
+    tools:context=".aui.StatisticsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -261,8 +261,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_star"
-                        android:tint="@color/easy_color"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/easy_color" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -292,8 +292,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_star"
-                        android:tint="@color/medium_color"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/medium_color" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -323,8 +323,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_star"
-                        android:tint="@color/hard_color"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/hard_color" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -353,8 +353,8 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_star"
-                        android:tint="@color/unbeatable_color"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/unbeatable_color" />
 
                     <TextView
                         android:layout_width="0dp"

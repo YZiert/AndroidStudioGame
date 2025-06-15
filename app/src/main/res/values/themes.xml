@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.SlyusarenkoGame" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.SlyusarenkoGame" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:fontFamily">@font/exo2</item>
+        <item name="fontFamily">@font/exo2</item>
+        <item name="android:textViewStyle">@style/OrbitronTextViewStyle</item>
+        <item name="buttonStyle">@style/OrbitronButtonStyle</item>
+        <item name="materialButtonStyle">@style/OrbitronMaterialButtonStyle</item>
+        <item name="android:textAppearance">@style/OrbitronTextAppearance</item>
+        <item name="android:textAppearanceButton">@style/OrbitronTextAppearance</item>
+    </style>
 </resources>

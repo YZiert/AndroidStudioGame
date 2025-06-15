@@ -3,20 +3,26 @@ package com.example.seabattle.aui
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import com.example.seabattle.BaseActivity
 import com.example.seabattle.R
 import com.example.seabattle.databinding.ActivityGameModeBinding
 import com.example.seabattle.databinding.DialogDifficultyBinding
+import com.example.seabattle.databinding.DialogPasswordBinding
 import com.example.seabattle.game.AIPlayer
 import com.example.seabattle.utils.PreferencesManager
 import com.example.seabattle.utils.SoundManager
 
-class GameModeActivity : AppCompatActivity() {
+class GameModeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityGameModeBinding
     private lateinit var soundManager: SoundManager
     private lateinit var prefsManager: PreferencesManager
+
+    companion object {
+        private const val DEVELOPER_PASSWORD = "DEVELOPER"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +44,7 @@ class GameModeActivity : AppCompatActivity() {
 
         binding.cardTwoPlayers.setOnClickListener {
             soundManager.playButtonClick()
-            startTwoPlayerGame()
+            showPasswordDialog()
         }
 
         binding.cardVsAI.setOnClickListener {
@@ -47,11 +53,43 @@ class GameModeActivity : AppCompatActivity() {
         }
     }
 
+    private fun showPasswordDialog() {
+        val dialogBinding = DialogPasswordBinding.inflate(LayoutInflater.from(this))
+
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .setCancelable(true)
+            .create()
+
+        dialogBinding.btnCancel.setOnClickListener {
+            soundManager.playButtonClick()
+            dialog.dismiss()
+        }
+
+        dialogBinding.btnConfirm.setOnClickListener {
+            soundManager.playButtonClick()
+            val enteredPassword = dialogBinding.etPassword.text.toString().trim()
+            
+            if (enteredPassword == DEVELOPER_PASSWORD) {
+                dialog.dismiss()
+                startTwoPlayerGame()
+            } else {
+                Toast.makeText(this, "Неверный пароль", Toast.LENGTH_SHORT).show()
+                dialogBinding.etPassword.text?.clear()
+            }
+        }
+
+        dialog.show()
+    }
+
     private fun startTwoPlayerGame() {
-        val intent = Intent(this, GameActivity::class.java)
-        intent.putExtra("GAME_MODE", GameActivity.GameMode.TWO_PLAYERS)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        Toast.makeText(this, "Режим для 2 игроков находится в разработке", Toast.LENGTH_LONG).show()
+        // Пока что просто показываем сообщение
+        // В будущем здесь будет:
+        // val intent = Intent(this, GameActivity::class.java)
+        // intent.putExtra("GAME_MODE", "TWO_PLAYERS")
+        // startActivity(intent)
+        // overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }
 
     private fun showDifficultyDialog() {
@@ -70,26 +108,26 @@ class GameModeActivity : AppCompatActivity() {
 
         dialogBinding.btnEasy.setOnClickListener {
             soundManager.playButtonClick()
-            startAIGame(AIPlayer.Difficulty.EASY)
+            startVsAIGame("EASY")
             dialog.dismiss()
         }
 
         dialogBinding.btnMedium.setOnClickListener {
             soundManager.playButtonClick()
-            startAIGame(AIPlayer.Difficulty.MEDIUM)
+            startVsAIGame("MEDIUM")
             dialog.dismiss()
         }
 
         dialogBinding.btnHard.setOnClickListener {
             soundManager.playButtonClick()
-            startAIGame(AIPlayer.Difficulty.HARD)
+            startVsAIGame("HARD")
             dialog.dismiss()
         }
 
         dialogBinding.btnUnbeatable.setOnClickListener {
             if (prefsManager.isUnbeatableUnlocked) {
                 soundManager.playButtonClick()
-                startAIGame(AIPlayer.Difficulty.UNBEATABLE)
+                startVsAIGame("UNBEATABLE")
                 dialog.dismiss()
             }
         }
@@ -97,10 +135,10 @@ class GameModeActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun startAIGame(difficulty: AIPlayer.Difficulty) {
+    private fun startVsAIGame(difficulty: String) {
         val intent = Intent(this, GameActivity::class.java)
-        intent.putExtra("GAME_MODE", GameActivity.GameMode.VS_AI)
-        intent.putExtra("AI_DIFFICULTY", difficulty.name)
+        intent.putExtra("GAME_MODE", "VS_AI")
+        intent.putExtra("AI_DIFFICULTY", difficulty)
         startActivity(intent)
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }

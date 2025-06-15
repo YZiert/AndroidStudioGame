@@ -2,12 +2,12 @@ package com.example.seabattle.aui
 
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import com.example.seabattle.BaseActivity
 import com.example.seabattle.databinding.ActivityStatisticsBinding
 import com.example.seabattle.utils.PreferencesManager
 import com.example.seabattle.utils.SoundManager
 
-class StatisticsActivity : AppCompatActivity() {
+class StatisticsActivity : BaseActivity() {
 
     private lateinit var binding: ActivityStatisticsBinding
     private lateinit var prefsManager: PreferencesManager

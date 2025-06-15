@@ -191,22 +191,25 @@
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@color/primary_text"
-                        android:layout_marginBottom="16dp" />
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/exo2" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Морской Бой"
                         android:textSize="16sp"
-                        android:textColor="@color/primary_text" />
+                        android:textColor="@color/primary_text"
+                        android:fontFamily="@font/exo2" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Версия 1.0"
+                        android:text="Версия alpha 0.0.1"
                         android:textSize="14sp"
                         android:textColor="@color/secondary_text"
-                        android:layout_marginTop="4dp" />
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/exo2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -214,15 +217,17 @@
                         android:text="Классическая игра в морской бой с современным интерфейсом"
                         android:textSize="14sp"
                         android:textColor="@color/secondary_text"
-                        android:layout_marginTop="12dp" />
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/exo2" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="© 2025 Sea Battle Game"
+                        android:text="© 2025 SlyusarenkoDev"
                         android:textSize="12sp"
                         android:textColor="@color/secondary_text"
-                        android:layout_marginTop="16dp" />
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/exo2" />
 
                 </LinearLayout>
 

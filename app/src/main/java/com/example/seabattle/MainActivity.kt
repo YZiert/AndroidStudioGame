@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import com.example.seabattle.aui.GameModeActivity
 import com.example.seabattle.aui.SettingsActivity
 import com.example.seabattle.aui.StatisticsActivity
 import com.example.seabattle.databinding.ActivityMainBinding
 import com.example.seabattle.utils.SoundManager
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var soundManager: SoundManager
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showExitDialog() {
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(this, R.style.DialogTheme)
             .setTitle("Выход из игры")
             .setMessage("Вы действительно хотите выйти?")
             .setPositiveButton("Да") { _, _ ->
